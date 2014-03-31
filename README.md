@@ -16,6 +16,16 @@ The name is a acronym for the swedish "Please code in a uniform way using a nice
 It's supposed to be pronounced according to the swedish word "käft", which basically means "maw". This is supposed
 to motivate you to code in a correct manner or you will get punched in the maw, or "käftsmäll".
 
+External libraries
+-----------------------------------
+
+### Dead Simple Grid
+HTMLPurifier by Edward Z. Yang to filter & format HTML.
+* Website: http://mourner.github.io/dead-simple-grid/
+* Version: From 2012
+* License: MIT
+* Kefft path: `webroot/css/style.css`
+
 License 
 ------------------
  

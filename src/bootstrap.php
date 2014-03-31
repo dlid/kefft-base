@@ -33,6 +33,6 @@ function dump($array) {
   echo "<pre>" . htmlentities(print_r($array, 1)) . "</pre>";
 }
 
-function get_navbar($menu) {
-	return CNavigation::GenerateMenu($menu);
+function get_navbar($menu, $activePageId) {
+	return CNavigation::GenerateMenu($menu, $activePageId);
 }

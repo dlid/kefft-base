@@ -30,6 +30,8 @@
 }
 
 
+.sitefooter {display: block; line-height: 1.5em}
+
 
 /**
  * General elements
@@ -48,19 +50,48 @@ body {
  */
 #wrapper {
   margin: 0 auto;
-  width: 980px; 
+  width: 680px; 
   padding: 16px;
   background-color: #fff;
+
+  border: solid 10px #e2e2e2;
 }
  
  
+blockquote {
+  background: #f9f9f9;
+  border-left: 6px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
 /**
  * Layout for header
  */
 #header {
   position: relative;
   margin-bottom: 1em;
+  color: #EA6447;
+  background-color: #283434;
+  font-weight: bold;
+  margin: -16px -16px 0 -16px;
+  padding: 16px 0 16px 0;
 }
+
+
 
 .row article.col {
   width: 50%;
@@ -74,7 +105,8 @@ h1:first-child {margin-top: 0;}
 
 .sitelogo {
   float: left;
-  margin-right: 18px
+  margin-right: 18px;
+  margin-left: 18px;
 }
  
 .sitetitle {
@@ -86,10 +118,11 @@ h1:first-child {margin-top: 0;}
  
 .siteslogan {
   position: relative;
-  display: inline-block;
+  margin-top: 0.8em;
   padding: 0.5em 0px;
   font-style: italic;
-  color: #666;
+  color: #A3945A;
+  margin-bottom: 0.5em;
 }
  
  
@@ -98,6 +131,10 @@ h1:first-child {margin-top: 0;}
  */
 #main {
   min-height: 20em;
+}
+
+#main p {
+  line-height: 1.4em;
 }
  
  
@@ -108,6 +145,15 @@ h1:first-child {margin-top: 0;}
   margin-top: 40px;
   border-top: 1px solid #ccc;
   padding-top: 15px;
+  font-size: .8em;
+}
+
+#footer a {
+  color:#283434;
+}
+
+#footer a:hover {
+  color:#EA6447;
 }
  
 .sitefooter {
@@ -116,17 +162,30 @@ h1:first-child {margin-top: 0;}
 
 #navbar {
   margin-bottom: 1em;
+  padding-top: 1em;
 }
 
 #navbar a {
-  color: #333;
-  padding: 4px 8px;
+  color: #414141;
+  padding: 6px 18px;
+  display: table-cell;
   text-decoration: none;
-  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+
+#navbar a.active, #navbar a.active:hover {
+  color: #000;
+  border: 1px solid #ddd;
+  background-color: #e2e2e2
+}
+
+#navbar a.active:hover {
+  color: #000;
+  background-color: #eaeaea
 }
 
 #navbar a:hover {
-  text-decoration: underline;
-  color: #00f;
+  background-color:#f1f1f1;
+  border-color: #ddd;
 }
 

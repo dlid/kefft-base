@@ -72,6 +72,7 @@ EOD;
  */
 $kefft['stylesheets'] = array('css/style.css');
 $kefft['favicon']    = 'favicon.ico';
+$kefft['pageId'] = null;
 
 /**
  * Settings for JavaScript.

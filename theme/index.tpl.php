@@ -12,7 +12,7 @@
 <body>
   <div id='wrapper'>
     <div id='header'><?=$header?></div>
-    <?php if(isset($navbar)): ?><div id='navbar'><?=get_navbar($navbar)?></div><?php endif; ?>
+    <?php if(isset($navbar)): ?><div id='navbar'><?=get_navbar($navbar, $pageId)?></div><?php endif; ?>
     <div id='main'><?=$main?></div>
     <div id='footer'><?=$footer?></div>
   </div>
