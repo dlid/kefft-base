@@ -20,7 +20,7 @@ External libraries
 -----------------------------------
 
 ### Dead Simple Grid
-HTMLPurifier by Edward Z. Yang to filter & format HTML.
+Dead Simple Grid by Vladimir Agafonkin for basic column layout support
 * Website: http://mourner.github.io/dead-simple-grid/
 * Version: From 2012
 * License: MIT

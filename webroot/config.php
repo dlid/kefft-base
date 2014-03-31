@@ -37,7 +37,7 @@ session_start();
  
  
 /**
- * Create the Anax variable.
+ * Create the Kefft variable.
  *
  */
 $kefft = array();
@@ -71,7 +71,7 @@ EOD;
  *
  */
 $kefft['stylesheets'] = array('css/style.css');
-$kefft['favicon']    = 'favicon.ico';
+$kefft['favicon']  = 'favicon.ico';
 $kefft['pageId'] = null;
 
 /**
