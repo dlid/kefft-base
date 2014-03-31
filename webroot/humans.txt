@@ -1,0 +1,10 @@
+/* TEAM */
+	Developer: David Lidström
+	Twitter: @davidlidstrom
+	From:Västerås, Sweden
+
+/* SITE */
+	Last update:2014/03/31
+	Language: Swedish
+	Doctype:HTML5
+	IDE: Sublime Text, Emmet.io, FileZilla, IcoFX

@@ -1,0 +1,1 @@
+window.console && window.console.log("main.js is loaded");

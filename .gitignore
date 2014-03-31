@@ -1,0 +1,11 @@
+# Logs and databases #
+######################
+*.sqlite
+*.log
+ 
+# OS generated files #
+######################
+._*
+Icon?
+ehthumbs.db
+Thumbs.db

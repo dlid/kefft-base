@@ -1,0 +1,132 @@
+
+/* Dead Simple Grid (c) 2012 Vladimir Agafonkin 
+  https://github.com/mourner/dead-simple-grid
+*/
+.col {
+  padding: 0 1.5em;
+}
+
+.row .row {
+  margin: 0 -1.5em;
+}
+
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+@media only screen {
+  .col {
+    float: left;
+    width: 100%;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+
+
+/**
+ * General elements
+ */
+body {
+  overflow-y: scroll;
+  background-color: #f1f1f1;
+  color: #333;
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ 
+/**
+ * Layout of the main page elements 
+ */
+#wrapper {
+  margin: 0 auto;
+  width: 980px; 
+  padding: 16px;
+  background-color: #fff;
+}
+ 
+ 
+/**
+ * Layout for header
+ */
+#header {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.row article.col {
+  width: 50%;
+}
+
+.row aside.col {
+  width: 50%;
+}
+
+h1:first-child {margin-top: 0;}
+
+.sitelogo {
+  float: left;
+  margin-right: 18px
+}
+ 
+.sitetitle {
+  display: block;
+  position: relative;
+  margin: 0;
+  font-size: 48px;
+}
+ 
+.siteslogan {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 0px;
+  font-style: italic;
+  color: #666;
+}
+ 
+ 
+/**
+ * Layout for main
+ */
+#main {
+  min-height: 20em;
+}
+ 
+ 
+/**
+ * Layout for footer
+ */
+#footer {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+ 
+.sitefooter {
+  color: #666;
+}
+
+#navbar {
+  margin-bottom: 1em;
+}
+
+#navbar a {
+  color: #333;
+  padding: 4px 8px;
+  text-decoration: none;
+  background-color: #f1f1f1;
+}
+
+#navbar a:hover {
+  text-decoration: underline;
+  color: #00f;
+}
+
