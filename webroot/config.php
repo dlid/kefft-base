@@ -62,8 +62,15 @@ $kefft['header'] = <<<EOD
 EOD;
 
 $kefft['footer'] = <<<EOD
-<footer><span class='sitefooter'>Copyright (c) David Lidström (me@dlid.se) | <a href='https://github.com/dlid/Kefft-base'>Kefft på GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span></footer>
+<span class='sitefooter'>Copyright (c) David Lidström (me@dlid.se) | 
+<a href='https://github.com/dlid/Kefft-base'>Kefft på GitHub</a></span>
+<span class='sitefooter'>
+Verktyg: <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a> |
+<a href="http://validator.w3.org/check/referer">HTML5</a> |
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+</span>
 EOD;
+
 
 
 /**

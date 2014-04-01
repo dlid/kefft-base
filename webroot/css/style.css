@@ -1,22 +1,63 @@
-
 /* Dead Simple Grid (c) 2012 Vladimir Agafonkin 
   https://github.com/mourner/dead-simple-grid
-*/
-.col {
-  padding: 0 1.5em;
+  */
+  .col {
+    padding: 0;
+  }
+
+  .row .row {
+    margin: 0 -1.5em;
+  }
+
+  .row:before, .row:after {
+    content: "";
+    display: table;
+  }
+  .row:after {
+    clear: both;
+  }
+
+/*
+ * Basic styles - mobile first
+ */
+
+ img {
+  border: none;
 }
 
-.row .row {
-  margin: 0 -1.5em;
+.sitelogo {
+  height: 16px;
+  margin: 0 4px;
+} 
+
+#header {
+  padding: 8px ! important;
 }
 
-.row:before, .row:after {
-  content: "";
-  display: table;
+.sitetitle {
+  display: block;
 }
-.row:after {
-  clear: both;
+
+.siteslogan {
+  font-weight: normal;
+  font-size: .8em;
+  padding:0;
+  margin:0;
 }
+
+#header {
+  margin: -16px -16px 0em -16px;
+}
+
+
+#navbar {
+  margin-left: -16px;
+}
+
+#navbar a {
+  padding: 6px 12px;
+}
+
 
 @media only screen {
   .col {
@@ -24,168 +65,259 @@
     width: 100%;
 
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 
+#main {
+  margin-top: 0.5em;
+}
+
+.toc ol, .toc li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.toc ol li {
+
+}
+
+@media only screen and (min-width: 40em) {
+
+  .col {
+    padding: 0 1.5em;
+  }
+  .row article.content {
+    width: 75%;
+    float:right;
+  }
+
+  .row aside.toc {
+    width: 25%;
+    float:left;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  #wrapper {
+    width: 960px; 
+    border: solid 10px #e2e2e2;
+    margin: 0.5em auto 0.5em auto;
+  }
+
+  .row article.content {width: 80%;}
+  .row aside.toc {width: 20%;}
+
+  article.content h2:first-child {
+    margin-top: 0;
+  }
+
+
+  .sitetitle {
+    position: relative;
+    margin: 0;
+    font-size: 48px;
+  }
+
+  .sitelogo {
+    height: auto;
+    margin: 8px 18px;
+  }
+
+  .siteslogan {
+    margin-bottom: 0.5em;
+    position: relative;
+    margin-top: 0.8em;
+    padding: 0.5em 0px;
+  }
+
+  #header {
+    margin-bottom:0;
+  }
+
+  #navbar {
+    margin-bottom: 1em;
+    padding-top: 1em;
+
+    margin-left: 0;
+  }
+
+  #navbar a {
+    padding: 6px 18px;
+  }
+
+
+
+}
 
 .sitefooter {display: block; line-height: 1.5em}
 
+@media only screen {
 
-/**
- * General elements
- */
-body {
-  overflow-y: scroll;
-  background-color: #f1f1f1;
-  color: #333;
-  font-family: helvetica, arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
- 
-/**
- * Layout of the main page elements 
- */
-#wrapper {
-  margin: 0 auto;
-  width: 680px; 
-  padding: 16px;
-  background-color: #fff;
+  /**
+   * General elements
+   */
+  body {
+    overflow-y: scroll;
+    background-color: #f1f1f1;
+    color: #333;
+    font-family: helvetica, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-  border: solid 10px #e2e2e2;
-}
- 
- 
-blockquote {
-  background: #f9f9f9;
-  border-left: 6px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  vertical-align: -0.4em;
-}
-
-blockquote p {
-  display: inline;
-}
-
-/**
- * Layout for header
- */
-#header {
-  position: relative;
-  margin-bottom: 1em;
-  color: #EA6447;
-  background-color: #283434;
-  font-weight: bold;
-  margin: -16px -16px 0 -16px;
-  padding: 16px 0 16px 0;
-}
+  /**
+   * Layout of the main page elements 
+   */
+  #wrapper {
+    padding: 16px;
+    background-color: #fff;
+  }
 
 
+  blockquote {
+    background: #f9f9f9;
+    border-left: 6px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 1em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
 
-.row article.col {
-  width: 50%;
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote p {
+    display: inline;
+  }
+  .src-container {min-width: 0 ! important;}
+
+  /**
+   * Layout for header
+   */
+  #header {
+    position: relative;
+    color: #EA6447;
+    background-color: #283434;
+    font-weight: bold;
+    padding: 16px 0 16px 0;
+    overflow: auto;
+  }
+
+  h1:first-child {margin-top: 0;}
+
+  .sitelogo {
+    float: left;
+  }
+
+  .siteslogan {
+    font-style: italic;
+    color: #A3945A;
+  }
+
+  /**
+   * Layout for main
+   */
+  #main {
+    min-height: 20em;
+    overflow-y:auto;
+  }
+
+  #main p {
+    line-height: 1.4em;
+  }
+
+  /**
+   * Layout for footer
+   */
+  #footer {
+    clear:both;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 18px;
+    font-size: .8em;
+    overflow:auto;
+  }
+
+  #footer a {
+    color:#283434;
+  }
+
+  #footer a:hover {
+    color:#EA6447;
+  }
+
+  .sitefooter {
+    color: #666;
+  }
+
+
+  #navbar a {
+    color: #414141;
+    display: table-cell;
+    text-decoration: none;
+    border: 1px solid #f1f1f1;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+  #navbar a.active, #navbar a.active:hover {
+    color: #000;
+    border: 1px solid #ddd;
+    background-color: #e2e2e2
+  }
+
+  #navbar a.active:hover {
+    color: #000;
+    background-color: #eaeaea
+  }
+
+  #navbar a:hover {
+    background-color:#f1f1f1;
+    border-color: #ddd;
+  }
+
+
+  .social-icons {margin-top: 1em;}
+
+  .byline {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px dotted #ccc; 
+    font-size: .8em;
+    margin-left: 1.5em;
+  }
+
 }
 
-.row aside.col {
-  width: 50%;
+
+.right {float:right;}
+.left {float:left;}
+img.right, img.left {margin: .4em;}
+
+
+@media print {
+  #wrapper {
+    border: none;
+  }
+  #navbar,
+  #footer {
+    display: none;
+  }
+  .byline {
+    font-size: .9em;
+    border-top: 1px solid #ccc;
+    padding-top: 0.5em;
+  }
+
 }
 
-h1:first-child {margin-top: 0;}
 
-.sitelogo {
-  float: left;
-  margin-right: 18px;
-  margin-left: 18px;
-}
- 
-.sitetitle {
-  display: block;
-  position: relative;
-  margin: 0;
-  font-size: 48px;
-}
- 
-.siteslogan {
-  position: relative;
-  margin-top: 0.8em;
-  padding: 0.5em 0px;
-  font-style: italic;
-  color: #A3945A;
-  margin-bottom: 0.5em;
-}
- 
- 
-/**
- * Layout for main
- */
-#main {
-  min-height: 20em;
-}
-
-#main p {
-  line-height: 1.4em;
-}
- 
- 
-/**
- * Layout for footer
- */
-#footer {
-  margin-top: 40px;
-  border-top: 1px solid #ccc;
-  padding-top: 15px;
-  font-size: .8em;
-}
-
-#footer a {
-  color:#283434;
-}
-
-#footer a:hover {
-  color:#EA6447;
-}
- 
-.sitefooter {
-  color: #666;
-}
-
-#navbar {
-  margin-bottom: 1em;
-  padding-top: 1em;
-}
-
-#navbar a {
-  color: #414141;
-  padding: 6px 18px;
-  display: table-cell;
-  text-decoration: none;
-  border: 1px solid #f1f1f1;
-}
-
-#navbar a.active, #navbar a.active:hover {
-  color: #000;
-  border: 1px solid #ddd;
-  background-color: #e2e2e2
-}
-
-#navbar a.active:hover {
-  color: #000;
-  background-color: #eaeaea
-}
-
-#navbar a:hover {
-  background-color:#f1f1f1;
-  border-color: #ddd;
-}
 

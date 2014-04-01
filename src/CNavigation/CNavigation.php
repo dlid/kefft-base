@@ -1,4 +1,9 @@
 <?php
+/**
+ * CNavigtion to easily generate a navigation menu
+ * 
+ * 2014-03-31: Added option for active item <David Lidström>
+ */
 class CNavigation {
   public static function GenerateMenu($items, $activeItemId = null) {
     $html = "<nav>\n";

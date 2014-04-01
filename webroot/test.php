@@ -11,6 +11,7 @@ $kefft['jquery'] = null;
 
 // Do it and store it all in variables in the kefft container.
 $kefft['title'] = "Test page";
+$kefft['pageId'] = 'test';
  
 $kefft['main'] = <<<EOD
 <h1>Testsida</h1>
